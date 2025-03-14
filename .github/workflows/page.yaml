@@ -1,0 +1,38 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [ main ]  # or master, depending on your default branch name
+  workflow_dispatch:    # Allows manual triggering
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+        
+      - name: Create redirect from index to HomePage
+        run: |
+          echo '<!DOCTYPE html>
+          <html>
+            <head>
+              <meta http-equiv="refresh" content="0; url=HomePage.html">
+              <title>Redirecting...</title>
+            </head>
+            <body>
+              <p>Redirecting to <a href="HomePage.html">HomePage.html</a>...</p>
+            </body>
+          </html>' > index.html
+          
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: '.'
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1

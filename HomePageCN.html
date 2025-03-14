@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,4 +33,195 @@
     </div>
     <br><br><br>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        html, body {
+            background-image: linear-gradient(#85cfea, #f2c7f5);
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .outer {
+            position: relative;
+            width: 100%;
+        }
+        .outer h1{
+            font-weight: bold;
+            color: #f6adfb;
+            text-align: center;
+            width: 100%;
+        }
+        .language {
+            position: absolute;
+            top: 10px;
+            right: 15%;
+            z-index: 100;
+        }
+        .chinese {
+            background-color: #85cfea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 15px;
+            cursor: pointer;
+            font-size: 14px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+        .chinese:hover {
+            background-color: #6bb9d6;
+        }
+        .block {
+            width: 70%;
+            height: 400px;
+            border: 1px solid snow;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 2px 2px 6px 2px #8e8d8d;
+            border-radius: 25px;
+            background-color: rgb(255, 255, 255);
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .image-side {
+            width: 75%;
+            height: 100%;
+            background-image: url("img/block.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .image-side:hover {
+            background-image: url("img/block.png");
+            filter: opacity(0.6) blur(0.5px);
+            transition: 0.3s ease-in-out;
+            
+        }
+        
+        .form-side {
+            width: 50%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .input-group {
+            width: 200px;
+            margin-bottom: 10px;
+        }
+        
+        .form-side h5 {
+            margin: 10px 0 5px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #549bb8;
+            text-align: left;
+            width: 100%;
+        }
+        .form-side h6 {
+            margin: 10px 0 5px;
+            font-size: 9px;
+            font-weight: bold;
+            color: #549bb8;
+            text-align: left;
+            width: 100%;
+            border: #549bb8;
+            border-bottom: 1px solid;
+            width: 40%
+        }
+        h6[tips] {
+            position: relative;
+            color: #549bb8;
+            cursor: pointer;
+            font-size: 8px;
+            display: inline-block;
+        }
+
+        h6[tips]::after {
+            content: attr(tips);
+            position: absolute;
+            left: 50%;
+            bottom: -30px; 
+            transform: translateX(-50%);
+            min-width: 130px;
+            background-color: #549bb8; 
+            color: white;
+            padding: 6px 8px;
+            border-radius: 5px;
+            font-size: 10px;
+            text-align: center;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        h6[tips]:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .form-side input {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #549bb8;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .login-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #85cfea;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            width: 200px;
+        }
+        
+        .login-btn:hover {
+            background-color: #6bb9d6;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <h1>主页</h1>
+        <div class="language">
+            <button class="chinese" onclick="window.location.href='HomePage.html'">English</button>
+        </div>
+        <div class="block">
+            <div class="image-side"></div>
+            <div class="form-side">
+                <div class="input-group">
+                    <h5>账号</h5>
+                    <input type="text" name="username" id="username">
+                </div>
+                <div class="input-group">
+                    <h5>密码 </h5>
+                    <input type="password" name="password" id="password">
+                </div>
+                <div class="input-group">
+                    <h6 tips="其实不用密码www">忘记密码了QWQ</h6>
+                </div>
+                <button class="login-btn">登录</button>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+</body>
+>>>>>>> 6faff5e97a0a7931847f0b5676ebe2f5279c2158
 </html>
